@@ -1,6 +1,7 @@
 const express = require('express')
 const dotenv=require("dotenv")
 
+
 const app = express()
 const port = 5000 || process.env.port
 const mongoDB=require("./db")
@@ -13,6 +14,7 @@ app.use((req,res,next)=>{
   )
   next()
 })
+
 
 mongoDB()
 app.get('/', (req, res) => {
